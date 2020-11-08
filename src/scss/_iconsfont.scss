@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'icons';
+  src:
+    url('../../dist/fonts/icons.woff?u74k45') format('woff'),
+    url('../../dist/fonts/icons.woff2?u74k45') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before, [class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+  content: "\e902";
+}
+.icon-apple:before {
+  content: "\e903";
+}
+.icon-slider-arrow:before {
+  content: "\e904";
+}
+.icon-play:before {
+  content: "\e905";
+}
+.icon-check:before {
+  content: "\e906";
+}
+.icon-star:before {
+  content: "\e907";
+}
