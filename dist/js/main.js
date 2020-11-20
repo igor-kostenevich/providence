@@ -882,20 +882,31 @@ if (isMobile.iOS()) {
 var iconMenu = document.querySelector(".icon-menu");
 
 if (iconMenu != null) {
-	var delay = 500;
-	var body = document.querySelector("body");
-	var menuMobile = document.querySelector(".menu__mobile");
-	var wrapperHeader = document.querySelector(".header__wrapper");
+	let delay = 500;
+	let body = document.querySelector("body");
+	let menuMobile = document.querySelector(".menu__mobile");
+	let wrapperHeader = document.querySelector(".header__wrapper");
+	let menuBody = document.querySelector(".menu__body");
 	
 	window.addEventListener('resize', () => {
 		if(window.innerWidth > 768){
 			iconMenu.classList.remove('active');
 			wrapperHeader.classList.remove('active');
 			menuMobile.classList.remove('active');
+			body.classList.remove('lock');
+		}
+		if(window.innerHeight > 375){
+			// console.log('qweqwe');
+			// menuBody.classList.remove('jc-start');
+			
+		} else {
+			// console.log('111');
+			// menuBody.classList.remove('jc-center');
+			// menuBody.classList.add('sss');
 		}
 	});
 
-	iconMenu.addEventListener("click", function (e) {
+	iconMenu.addEventListener("click", function (e){
 		if (!body.classList.contains('wait')) {
 			body_lock(delay);
 			iconMenu.classList.toggle("active");
@@ -905,9 +916,10 @@ if (iconMenu != null) {
 	});
 }
 
+
 function menu_close() {
-	var iconMenu = document.querySelector(".icon-menu");
-	var menuBody = document.querySelector(".menu__body");
+	let iconMenu = document.querySelector(".icon-menu");
+	let menuBody = document.querySelector(".menu__body");
 	iconMenu.classList.remove("active");
 	menuBody.classList.remove("active");
 } //=================
@@ -1233,8 +1245,6 @@ testWebP(function (support) {
 // 		}
 // 	});
 // }
-
-
 
 
 function map(n){
@@ -1770,33 +1780,35 @@ function preventDefaultForScrollKeys(e) {
 		  return false;
 	}*/
 }
-// if (document.querySelector('.mainslider')) {
-// 	$('.mainslider__body').slick({
-// 		lazyLoad: 'ondemand',
-// 		dots: true,
-// 		arrows: false,
-// 		infinite: true,
-// 		speed: 600,
-// 		slidesToShow: 1,
-// 		slidesToScroll: 1,
-// 		dotsClass: 'mainslider__dotts',
-// 		adaptiveHeight: true
-// 	});
+if (document.querySelector('.gallery-interface')) {
+    $('.gallery-interface').slick({
+        lazyLoad: 'ondemand',
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 4,
+        // swipeToSlide: true,
+        slidesToScroll: 1,
+        // adaptiveHeight: true
+        centerMode: true,
+        centerPadding: '20%'
+    });
+}
 
-// 	document.addEventListener('DOMContentLoaded', function () {
-// 		let mainsliderImages = document.querySelectorAll('.mainslider__image');
-// 		let mainsliderImageArr = Array.prototype.slice.call(mainsliderImages);
-// 		let mainsliderDotts = document.querySelectorAll('.mainslider__dotts li button');
-// 		mainsliderImageArr = mainsliderImageArr.slice(1);
 
-// 		for (let index = 0; index < mainsliderImageArr.length; index++) {
-// 			const mainsliderImage = mainsliderImageArr[index].querySelector('img').getAttribute('src');
-// 			if (mainsliderDotts[index] !== undefined) {
-// 				mainsliderDotts[index].style.backgroundImage = "url('" + mainsliderImage + "')";
-// 			}
-// 		}
-// 	});
+// paramGlideGallery = {
+//     type: 'carousel',
+//     startAt: 0,
+//     perView: 3,
+//     gap: 30,
+//     // perTouch: false,
+//     peek: 350,
+//     focusAt: 3
 // }
+
+
+// new Glide('.images', paramGlideGallery).mount();
 
 // Products slider
 
@@ -1837,7 +1849,7 @@ function preventDefaultForScrollKeys(e) {
 // 		asNavFor: '.images-product__subslider'
 // 	});
 
-	
+
 // }
 // $('.images-product__subslider').slick({
 // 	lazyLoad: 'ondemand',
@@ -1850,9 +1862,6 @@ function preventDefaultForScrollKeys(e) {
 // 	asNavFor: '.images-product__mainslider',
 // 	focusOnSelect: true
 // });
-
-
-
 $(document).ready(function () {
     var isMobile = {
         Android: function () {

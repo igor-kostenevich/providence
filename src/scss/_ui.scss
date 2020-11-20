@@ -2,6 +2,23 @@
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 
+.title {
+	color: #26272d;
+	font-family: "VarelaRound";
+	font-size: 42px;
+	font-weight: 400;
+	line-height: calc(52 / 42);
+
+	@media (max-width: $md2+px) {
+		font-size: 32px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 28px;
+	}
+}
+
+
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
@@ -236,6 +253,7 @@ body.ie .ibg img {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
+		padding:0 20% 0 0;
 	}
 
 	.slick-track {
@@ -243,12 +261,20 @@ body.ie .ibg img {
 		width: 100%;
 		display: flex;
 		align-items: stretch;
+		margin: 0 -14.6666%;
+		
 	}
 
 	.slick-slide {
 		overflow: hidden;
 		float: left;
 		position: relative;
+		// text-align: center;
+		// padding: 0 20px;
+	}
+
+	.slick-center {
+		// transform: scale(.5);
 	}
 
 	.slick-dots {
@@ -329,8 +355,6 @@ body.ie .ibg img {
 .baloon-close {
 	top: 18px !important;
 }
-
-// ==================================================================================
 
 
 //</ГОТОВЫЕ КЛАССЫ>====================================================================================================
