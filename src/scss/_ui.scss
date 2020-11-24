@@ -253,7 +253,6 @@ body.ie .ibg img {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		padding:0 20% 0 0;
 	}
 
 	.slick-track {
@@ -261,20 +260,31 @@ body.ie .ibg img {
 		width: 100%;
 		display: flex;
 		align-items: stretch;
-		margin: 0 -14.6666%;
-		
 	}
 
 	.slick-slide {
 		overflow: hidden;
 		float: left;
 		position: relative;
-		// text-align: center;
-		// padding: 0 20px;
 	}
 
-	.slick-center {
-		// transform: scale(.5);
+	.slick-arrow{
+		background: url("../../dist/img/icons/arrow-slider.svg") center no-repeat;
+		display: block;
+		width: 23px;
+		height: 42px;
+		position: absolute;
+		z-index: 5;
+	}
+
+	.slick-prev {
+		// background: url("../../dist/img/icons/arrow-slider.svg") center no-repeat;
+		transform: rotate(180deg);
+		left: 20px;
+	}
+
+	.slick-next {
+		right: 20px;
 	}
 
 	.slick-dots {

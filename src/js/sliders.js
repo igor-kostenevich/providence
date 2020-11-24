@@ -1,32 +1,27 @@
-if (document.querySelector('.gallery-interface')) {
-    $('.gallery-interface').slick({
+if (document.querySelector('.customers-slider')) {
+    $('.customers-slider__body').slick({
         lazyLoad: 'ondemand',
-        dots: false,
-        arrows: false,
-        infinite: true,
+        dots: true,
+        arrows: true,
+        infinite: false,
         speed: 600,
-        slidesToShow: 4,
-        // swipeToSlide: true,
+        slidesToShow: 1,
         slidesToScroll: 1,
-        // adaptiveHeight: true
-        centerMode: true,
-        centerPadding: '20%'
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        dotsClass: 'navigation-slider-customers__dots',
+        appendDots: $('.navigation-slider-customers__wrapper'),
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false
+              }
+            }
+          ]
     });
 }
 
-
-// paramGlideGallery = {
-//     type: 'carousel',
-//     startAt: 0,
-//     perView: 3,
-//     gap: 30,
-//     // perTouch: false,
-//     peek: 350,
-//     focusAt: 3
-// }
-
-
-// new Glide('.images', paramGlideGallery).mount();
 
 // Products slider
 

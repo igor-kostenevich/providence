@@ -22,20 +22,24 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	height: 39px;
+	height: 42px;
+	border-radius: 21px;
+	background-color: #6fc754;
 	font-size: 15px;
-	padding: 0px 25px;
-	background-color: #f68038;
+	padding: 0px 30px 0px 10px;
 	transition: all .2s ease 0s;
 	color: #fff;
-	font-size: 12px;
-	font-weight: 900;
-	line-height: 18px;
-	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 400;
+
+	@media (max-width: $md4+px){
+	   font-size: 14px;
+	   padding: 0 30px 0 10px;
+	}
 
 	@media (min-width: 992px) {
 		&:hover {
-			background-color: #e2681c;
+			background-color: #5dd139;
 		}
 	}
 
@@ -179,21 +183,27 @@ textarea {
 }
 
 .input {
+	color: #3a3d4b;
+	font-weight: 400;
+	font-family: "Lato";
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
 	padding: 0px 25px;
-	font-size: 15px;
-	border: 1px solid #dadada;
-	background-color: #fff;
-	height: 30px;
+	font-size: 16px;
+	background-color: transparent;
+
+	@media (max-width: $md4+px){
+	   padding: 0px 10px;
+	   font-size: 14px;
+	}
 
 	&.focus {
-		border: 1px solid #72c9d4;
+		// border: 1px solid #72c9d4;
 	}
 
 	&.err {
-		border: 1px solid red;
+		// border: 1px solid red;
 	}
 }
 
@@ -387,6 +397,7 @@ textarea.input {
 	&-wrapp {
 		margin: 0px 15px;
 	}
+
 	&:focus {
 		border: 1px solid #72c9d4;
 	}
@@ -408,7 +419,8 @@ textarea.input {
 
 	&.up {
 		transform: rotate(180deg);
-		@media (min-width: 992px){
+
+		@media (min-width: 992px) {
 			&:hover {
 				background: url("../../dist/img/icons/sl-arrow-o.svg") 0 0 / 100% no-repeat;
 			}
@@ -416,7 +428,7 @@ textarea.input {
 	}
 
 	&.dwn {
-		@media (min-width: 992px){
+		@media (min-width: 992px) {
 			&:hover {
 				background: url("../../dist/img/icons/sl-arrow-o.svg") 0 0 / 100% no-repeat;
 			}
