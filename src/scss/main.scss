@@ -118,6 +118,19 @@ body.lock {
 		   padding: 80px 0;
 		}
 	}
+
+	// .content__plan
+	&__plan {
+		padding: 160px 0px;
+
+		@media (max-width: $md2+px){
+			padding: 100px 0;
+		}
+
+		@media (max-width: $md4+px){
+			padding: 70px 0px;
+		}
+	}
 }
 
 .info-content {
@@ -856,3 +869,232 @@ body.lock {
 		}
 	}
 }
+
+// PLAN ================================================================================== 
+
+.plan {
+	background-color: #f4f4f5;
+
+	// .plan__container
+	&__container {
+		display: flex;
+
+		@media (max-width: $md2+px){
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	// .plan__column
+	&__column {
+		&:first-child {
+			flex: 0 1 500px;
+			padding: 0px 100px 0px 0px;
+
+			@media (max-width: $md2+px){
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 0px 0px 0px 0px;
+				margin: 0px 0px 100px 0px;
+			}
+		}
+		&:last-child {
+			flex: 0 1 670px;
+			display: flex;
+
+			@media (max-width: $md4+px){
+				flex-direction: column;
+			}
+		}
+		span {
+			font-size: 12px;
+			font-weight: 700;
+			letter-spacing: 1.2px;
+			line-height: 22px;
+			text-transform: uppercase;
+			margin: 0px 0px 13px 0px;
+			display: block;
+		}
+	}
+	// .plan__title
+	&__title {
+		max-width: 275px;
+		margin: 0px 0px 60px 0px;
+
+		@media (max-width: $md2+px){
+			max-width: 100%;
+		}
+	}
+	// .plan__rate
+	&__rate {
+		border: 1px solid #d5d6d7;
+		border-radius: 20px;
+		display: flex;
+		height: 50px;
+		width: 260px;
+		padding: 4px;
+		margin: 0px 0px 73px 0px;
+	}
+	// .plan__rate-name
+	&__rate-name {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 20px;
+		flex: 0 0 50%;
+		font-size: 14px;
+		font-weight: 400;
+		cursor: pointer;
+		transition: all .5s ease;
+
+		&.active {
+			box-shadow: 10px 28px 50px rgba(92, 95, 101, 0.28), 2px 5px 20px rgba(61, 61, 62, 0.15);
+			background-color: #ffffff;
+			font-size: 16px;
+		}
+	}
+	// .plan__text
+	&__text {
+		color: #8c8f94;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: calc(28 / 20);
+		margin: 0px 0px 36px 0px;
+
+		@media (max-width: $md4+px){
+			font-size: 18px;
+		}
+	}
+
+	&__small-text {
+		color: #8c8f94;
+
+		a {
+			color: #267df4;
+			text-decoration: underline;
+			margin: 0px 0px 0px 7px;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}	
+
+	// .plan__card
+	&__card {
+		text-align: center;
+		flex: 0 0 50%;
+	}
+}
+
+.card-plan {
+	display: flex;
+	flex-direction: column;
+	background-color: #ebebed;
+	padding: 40px 35px 50px;
+	border-radius: 10px;
+	transition: all .5s ease;
+
+	&.active {
+		box-shadow: 10px 28px 50px rgba(92, 95, 101, 0.2);
+		background-color: #ffffff;
+		transform: scale(1.1);
+		position: relative;
+		z-index: 2;
+
+		.card-plan__price {
+			border: 1px solid #d4d4d5;
+		}
+
+		.card-plan__btn {
+				background-color: #267df4;
+				color: #ffffff;
+				
+				&:hover {
+					background-color: #0465ec;
+				}
+		}
+	}
+
+	// .card-plan__name
+	&__name {
+		color: #26272d;
+		font-weight: 400;
+		text-align: center;
+		font-size: 32px;
+		margin: 0px 0px 18px 0px;
+	}
+	// .card-plan__price
+	&__price {
+		display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+		color: #26272d;
+		font-weight: 700;
+		letter-spacing: 1.1px;
+		text-transform: uppercase;
+		font-size: 11px;
+		border: 2px solid  #c4c4c6;
+		border-radius: 15px;
+		height: 28px;
+		width: 62px;
+		margin: 0px 0px 50px 0px;
+	}
+	// .card-plan__text
+	&__text {
+		color: #8c8f94;
+		font-size: 20px;
+		line-height: calc(26 / 20);
+		margin: 0px 0px 40px 0px;
+	}
+	// .card-plan__list
+	&__list {
+		margin: 0px 0px 40px 0px;
+		flex: 1 1 auto;
+		li {
+		color: #26292c;
+		font-size: 16px;
+		margin: 0px 0px 16px 0px;
+		// padding: 0px 0px 0px 20px;
+		// background: url("../../dist/img/icons/check-icon.svg") left 3px no-repeat;
+		// display: inline-flex;
+
+			&:before {
+				content: '';
+				background: url("../../dist/img/icons/check-icon.svg") no-repeat;
+				height: 10px;
+				width: 14px;
+				display: inline-block;
+				margin: 0px 10px 0px 0px;
+			}
+		}
+	}
+	// .card-plan__btn
+	&__btn {
+		border: 1px solid #267df4;
+		color: #267df4;
+		background-color: transparent;
+		border-radius: 20px;
+		font-size: 16px;
+		display: block;
+		padding: 12px 0;
+		box-sizing: border-box;
+		transition: all .3s ease;
+
+		&:hover {
+			color: #0a4ca8;
+			border: 1px solid #0a4ca8;
+		}
+	}
+
+	@media (max-width: $md4+px){
+		align-self: center;
+		margin: 0px 0px 50px 0px;
+
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+}
+

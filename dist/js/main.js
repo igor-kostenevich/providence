@@ -1225,6 +1225,26 @@ testWebP(function (support) {
 	}
 });
 
+let rateName = $('.plan__rate-name')
+let cardPlan = $('.card-plan')
+
+rateName.on('click', function() {
+		rateName.removeClass('active')
+		cardPlan.removeClass('active')
+		$(this).addClass('active')
+
+		if ($('.company ').hasClass('active')){
+			$('.pro').addClass('active')
+		}
+
+		if ($('.individual ').hasClass('active')){
+			$('.starter').addClass('active')
+		}
+})
+
+
+
+
 
 
 // let checkboxCategories = document.querySelectorAll('.categories__checkbox');
