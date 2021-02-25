@@ -125,7 +125,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 650px){
+  @media (max-width: 650px) {
     flex-direction: column;
   }
 
@@ -145,7 +145,7 @@
       }
     }
 
-    @media (max-width: 650px){
+    @media (max-width: 650px) {
       margin: 0px 0px 14px 0px;
     }
   }
