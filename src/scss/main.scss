@@ -131,6 +131,15 @@ body.lock {
 			padding: 70px 0px;
 		}
 	}
+
+	// .content__subscribe
+	&__subscribe {
+		padding: 80px 0px;
+
+		@media (max-width: $md4+px){
+			padding: 50px 0;
+		}
+	}
 }
 
 .info-content {
@@ -1014,6 +1023,10 @@ body.lock {
 					background-color: #0465ec;
 				}
 		}
+
+		@media (max-width: $md3+px){
+			transform: scale(1.05);
+		}
 	}
 
 	// .card-plan__name
@@ -1098,3 +1111,41 @@ body.lock {
 	}
 }
 
+
+// Subscribe ==================================================================================
+
+.subscribe {
+	// .subscribe__container
+	&__container {
+		max-width: 600px;
+		text-align: center;
+	}
+	// .subscribe__title
+	&__title {
+		margin: 0px 0px 36px 0px;
+	}
+	// .subscribe__form
+	&__form {
+		border: 2px solid #f2f3f3;
+    display: flex;
+		align-items: center;
+    border-radius: 20px;
+		margin: 0px 0px 23px 0px;
+
+		input {
+			height: 50px;
+		}
+
+		button {
+			padding: 0px 0px 0px 0px;
+			height: 42px;
+			width: 134px;
+			margin: 0px 4px 0px 0px;
+		}
+	}
+	// .subscribe__text
+	&__text {
+		color: #8c8f94;
+		font-size: 14px;
+	}
+}
